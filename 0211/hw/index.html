@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>0211</title>
+</head>
+<body>
+    <div class="nav">
+        <h1 class="logo">LOGO</h1>
+        <ul class="menu">
+            <a href="index.html"><li class="menu__item">
+                <p class="menu__item__title">Фильмы</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+            <a href="people.html"><li class="menu__item">
+                <p class="menu__item__title">Люди</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+            <a href="feedback.html"><li class="menu__item">
+                <p class="menu__item__title">Обратная связь</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+        </ul>
+    </div>
+    <div class="main">
+        <table>
+            <p class="heading">Мои любимые фильмы</p>
+            <tr>
+                <th>Название</th>
+                <th>Жанр</th>
+                <th>Год выхода</th>
+            </tr>
+            <tr>
+                <td>Интерстеллар</td>
+                <td>Драма/Научная фантастика</td>
+                <td>2014</td>
+            </tr>
+            <tr>
+                <td>Бойцевский клуб</td>
+                <td>Драма/Триллер</td>
+                <td>1999</td>
+            </tr>
+            <tr>
+                <td>Социальная сеть</td>
+                <td>Драма/Исторический</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>1+1</td>
+                <td>Драма/Комедия</td>
+                <td>2011</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const menuItem = document.querySelectorAll('.menu__item');
+
+        setTimeout(() => {
+            Array.prototype.forEach.call(menuItem, function(el) {
+                el.addEventListener('mouseenter', () => {
+                    const bg = el.children[1]
+                    bg.style = 'width: 100%;'
+                })
+                el.addEventListener('mouseleave', () => {
+                    const bg = el.children[1]
+                    bg.style = 'width: 0;'
+                })
+            });
+        }, 1)
+
+    </script>
+</body>
+</html>

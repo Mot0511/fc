@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: arial, serif;
+
+}
+h1{
+    font-size: 100px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+h1:hover{
+    text-shadow: 5px 5px 5px black;
+    transform: rotateZ(5deg) rotateY(50deg);
+}
+.container{
+    position: relative;
+}
+h2{
+    position: absolute;
+    font-size: 100px;
+    top: 50px;
+    left: 100px;
+    transition: 0.3s;
+
+}
+h2:hover{
+    transform: rotateX(40deg);
+    text-shadow: 0 10px 5px black;
+}

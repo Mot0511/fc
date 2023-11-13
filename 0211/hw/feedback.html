@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>0211</title>
+</head>
+<body>
+    <div class="nav">
+        <h1 class="logo">LOGO</h1>
+        <ul class="menu">
+            <a href="index.html"><li class="menu__item">
+                <p class="menu__item__title">Фильмы</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+            <a href="people.html"><li class="menu__item">
+                <p class="menu__item__title">Люди</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+            <a href="feedback.html"><li class="menu__item">
+                <p class="menu__item__title">Обратная связь</p>
+                <div class="menu__item__bg"></div>
+            </li></a>
+        </ul>
+    </div>
+    <div class="main">
+        <p class="heading">Связь с преподавателем</p>
+        <form action="">
+            <input class="text-input" type="text" placeholder="Имя"><br>
+            <input class="text-input" type="email" placeholder="Почта"><br>
+            <p>Пол:</p>
+            <div class="gedners">
+                <div class="gender">
+                    <label for="male">Мужской</label>
+                    <input id="male" name="gender" type="radio" class="genderType">
+                </div>
+                <div class="gender">
+                    <label for="female">Женский</label>
+                    <input id="female" name="gender" type="radio" class="genderType">
+                </div>
+            </div>
+            <textarea placeholder="Сообщение"></textarea><br>
+            <button>Отправить</button>
+        </form>
+    </div>
+    <script>
+        const menuItem = document.querySelectorAll('.menu__item');
+
+        setTimeout(() => {
+            Array.prototype.forEach.call(menuItem, function(el) {
+                el.addEventListener('mouseenter', () => {
+                    const bg = el.children[1]
+                    bg.style = 'width: 100%;'
+                })
+                el.addEventListener('mouseleave', () => {
+                    const bg = el.children[1]
+                    bg.style = 'width: 0;'
+                })
+            });
+        }, 1)
+
+    </script>
+</body>
+</html>
